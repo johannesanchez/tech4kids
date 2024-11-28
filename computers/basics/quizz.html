@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Basics Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .question {
+            margin: 15px 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Computer Basics Quiz</h1>
+    <form action="https://formsubmit.co/72a22628e5848b9da010da58fdc18666" method="POST" onsubmit="return confirmSubmission()">
+        
+        <!-- Email Protection -->
+        <input type="hidden" name="_subject" value="Quiz Submission">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_confirmation" value="Thank you! Your answers have been submitted successfully.">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/computers/basics/thankyou.html">
+        <input type="text" name="_honey" style="display:none">
+    
+
+        <!-- Quiz Questions -->
+        <div class="question">
+            <h2>Select which of the following is a computer:</h2>
+            <label><input type="checkbox" name="computer[]" value="Desktop"> Desktop</label><br>
+            <label><input type="checkbox" name="computer[]" value="Laptop"> Laptop</label><br>
+            <label><input type="checkbox" name="computer[]" value="Raspberry Pi"> Raspberry Pi</label><br>
+            <label><input type="checkbox" name="computer[]" value="iPad"> iPad</label><br>
+            <label><input type="checkbox" name="computer[]" value="Smartphone"> Smartphone</label><br>
+            <label><input type="checkbox" name="computer[]" value="TV"> TV</label>
+        </div>
+
+        <div class="question">
+            <h2>Mention parts of a desktop:</h2>
+            <label><input type="checkbox" name="desktop_parts[]" value="Tower or CPU"> Tower or CPU</label><br>
+            <label><input type="checkbox" name="desktop_parts[]" value="Monitor"> Monitor</label><br>
+            <label><input type="checkbox" name="desktop_parts[]" value="Mouse"> Mouse</label><br>
+            <label><input type="checkbox" name="desktop_parts[]" value="Keyboard"> Keyboard</label>
+        </div>
+
+        <div class="question">
+            <h2>A laptop can be:</h2>
+            <label><input type="radio" name="laptop_os" value="Windows"> Windows</label><br>
+            <label><input type="radio" name="laptop_os" value="Linux"> Linux</label><br>
+            <label><input type="radio" name="laptop_os" value="Apple Mac"> Apple Mac</label><br>
+            <label><input type="radio" name="laptop_os" value="all"> All of them</label><br>
+            <label><input type="radio" name="laptop_os" value="any"> Any of them</label>
+        </div>
+
+        <!-- Student's Name -->
+        <div class="question">
+            <h2>Enter your Name:</h2>
+            <input type="text" name="student_name" required>
+        </div>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+
+    <script>
+        function confirmSubmission() {
+            return confirm("Are you sure you want to submit your answers?");
+        }
+    </script>
+
+</body>
+</html>
