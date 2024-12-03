@@ -14,7 +14,7 @@ Introduction:
 
     Return to Quiz:
         - What should I do before using a computer?
-        Wash and dry my hands?
+        A/Wash and dry my hands?
         - Why?
         - I'm studying in the computer and my mom takes me the dinner, what should I do?
             -> Eat the dinner.

@@ -11,8 +11,11 @@
             margin: auto;
             padding: 20px;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
+        }
+        h2 {
+            text-align: left;
         }
         .question {
             margin: 15px 0;
@@ -31,6 +34,11 @@
         button:hover {
             background-color: #45a049;
         }
+        .long-input {
+            width: 80%;
+            padding: 8px;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -46,10 +54,61 @@
         <input type="hidden" name="_next" value="http://127.0.0.1:5500/computers/basics/thankyou.html">
         <input type="text" name="_honey" style="display:none">
     
+        <!-- Student's Name -->
+        <div class="question">
+            <h2>Enter your Name:</h2>
+            <input type="text" name="student_name" required class="long-input">
+        </div>
 
         <!-- Quiz Questions -->
+        <!-- Higiene -->
         <div class="question">
-            <h2>Select which of the following is a computer:</h2>
+            <h2>1. What should I do before using a computer?</h2>
+            <input type="text" name="before_using_computer" required class="long-input">
+        </div>
+
+        <div class="question">
+            <h2>2. I'm studying in the computer and my mom takes me the dinner, what should I do?</h2>
+            <label><input type="checkbox" name="eat_dinner[]" value="Eat the dinner"> Eat the dinner</label><br>
+            <label><input type="checkbox" name="eat_dinner[]" value="Eat_a_little"> Eating the dinner will take time, instead I will eat only a little bit.</label><br>
+            <label><input type="checkbox" name="eat_dinner[]" value="dinner_proper_place"> Stop Sudying, and takes the dinner in a proper place.</label><br>
+            <label><input type="checkbox" name="eat_dinner[]" value="dont_eat"> Do not eat the dinner</label><br>
+        </div>
+
+        <div class="question">
+            <h2>3. If I'm eating or drinking when studying in the computer what could it eventually happen?</h2>
+            <input type="text" name="eating_while_computer" required class="long-input">
+        </div>
+
+        <div class="question">
+            <h2>4. What do I need to do to open a program?</h2>
+            <label><input type="checkbox" name="open_program[]" value="super_patient"> Click once the Program Icon, be super patient and wait until the program opens</label><br>
+            <label><input type="checkbox" name="open_program[]" value="open_multiple_times"> Click the Program Icon multiple times.</label><br>
+        </div>
+
+        <div class="question">
+            <h2>5. What is the best way to turn off the computer?</h2>
+            <label><input type="radio" name="turnoff_computer" value="dont_worry"> The computer will turn off by itself, Don't worry.</label><br>
+            <label><input type="radio" name="turnoff_computer" value="close_safely"> Save all your progress, close the software if required then look for the turn off option.</label><br>
+            <label><input type="radio" name="turnoff_computer" value="turn_off_multiple_times"> Press the button on/off multiple times until the computer turns off.</label><br>
+            <label><input type="radio" name="turnoff_computer" value="ask_someone_else_turn_off"> Ask your brother/sister to turn off.</label><br>
+        </div>
+
+        <div class="question">
+            <h2>6. I turned off the computer  but this is taking a while to turn off (more than 2 minutes).</h2>
+            <label><input type="radio" name="taking_long_computer" value="dont_worry"> Be super patient, then Hold the on/off button for 5 or 7 seconds until the computer</label><br>
+            <label><input type="radio" name="taking_long_computer" value="close_safely"> Look for a hammer and smash the computer until this is turned-off</label><br>
+            <label><input type="radio" name="taking_long_computer" value="turn_off_multiple_times"> Unplug the Power cord and take off the battery</label><br>
+        </div>
+
+        <div class="question">
+            <h2>7. For typing should I use only two fingers?</h2>
+            <label><input type="radio" name="two_fingers_typing" value="dont_worry"> Yes</label><br>
+            <label><input type="radio" name="two_fingers_typing" value="close_safely"> No</label><br>
+        </div>
+
+        <div class="question">
+            <h2>8. Select which of the following is a computer:</h2>
             <label><input type="checkbox" name="computer[]" value="Desktop"> Desktop</label><br>
             <label><input type="checkbox" name="computer[]" value="Laptop"> Laptop</label><br>
             <label><input type="checkbox" name="computer[]" value="Raspberry Pi"> Raspberry Pi</label><br>
@@ -59,7 +118,7 @@
         </div>
 
         <div class="question">
-            <h2>Mention parts of a desktop:</h2>
+            <h2>9. Mention parts of a desktop:</h2>
             <label><input type="checkbox" name="desktop_parts[]" value="Tower or CPU"> Tower or CPU</label><br>
             <label><input type="checkbox" name="desktop_parts[]" value="Monitor"> Monitor</label><br>
             <label><input type="checkbox" name="desktop_parts[]" value="Mouse"> Mouse</label><br>
@@ -67,20 +126,114 @@
         </div>
 
         <div class="question">
-            <h2>A laptop can be:</h2>
+            <h2>10. A laptop can be:</h2>
             <label><input type="radio" name="laptop_os" value="Windows"> Windows</label><br>
             <label><input type="radio" name="laptop_os" value="Linux"> Linux</label><br>
             <label><input type="radio" name="laptop_os" value="Apple Mac"> Apple Mac</label><br>
-            <label><input type="radio" name="laptop_os" value="all"> All of them</label><br>
-            <label><input type="radio" name="laptop_os" value="any"> Any of them</label>
+            <label><input type="radio" name="laptop_os" value="all of above"> All of them</label><br>
+            <label><input type="radio" name="laptop_os" value="any of above"> Any of them</label>
         </div>
 
-        <!-- Student's Name -->
         <div class="question">
-            <h2>Enter your Name:</h2>
-            <input type="text" name="student_name" required>
+            <h2>11. What is a Server?</h2>
+            <label><input type="radio" name="what_is_server" value="Windows"> A Server is a computer that you can own at home.</label><br>
+            <label><input type="radio" name="what_is_server" value="Linux"> A Server is compute machine located in Companies or Datacenters, it costs a lot of money and it usually runs applications.</label><br>
+            <label><input type="radio" name="what_is_server" value="Apple Mac"> A server and a smartphone are the same</label><br>
         </div>
 
+        <div class="question">
+            <h2>12. What are the components of a Computer?</h2>
+            <label><input type="checkbox" name="components_computer[]" value="Hardware"> Hardware</label><br>
+            <label><input type="checkbox" name="components_computer[]" value="Software"> Software</label><br>
+            <label><input type="checkbox" name="components_computer[]" value="Operating System"> Operating System</label><br>
+            <label><input type="checkbox" name="components_computer[]" value="Networking"> Networking</label>
+        </div>
+
+        <div class="question">
+            <h2>13. Hardware includes the physical parts of a computer. </h2>
+            <label><input type="radio" name="hardware_is" value="true"> True</label><br>
+            <label><input type="radio" name="hardware_is" value="false"> False</label><br>
+        </div>
+
+        <div class="question">
+            <h2>14. Select Examples of Internal Hardware</h2>
+            <label><input type="checkbox" name="examples_hardware[]" value="Printer"> Printer</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="CPU"> CPU</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Keyboard"> Keyboard</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Hard Drives"> Hard Drives</label>
+            <label><input type="checkbox" name="examples_hardware[]" value="Desktop"> Desktop</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Mouse"> Mouse</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="RAM Memory"> RAM Memory</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Scanners"> Scanners</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Monitor"> Monitor</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Power Cable"> Power Cable</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Internet Cable"> Internet Cable</label><br>
+            <label><input type="checkbox" name="examples_hardware[]" value="Motherboard"> Motherboard</label><br>
+        </div>
+
+        <div class="question">
+            <h2>15. An Operating System (OS) is a program that helps the user to manage the computer resources</h2>
+            <label><input type="radio" name="os_is" value="true"> True</label><br>
+            <label><input type="radio" name="os_is" value="false"> False</label><br>
+        </div>
+
+        <div class="question">
+            <h2>16. Examples of Operating System:</h2>
+            <label><input type="checkbox" name="examples_os[]" value="MacOS"> MacOS</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Hardware"> Hardware</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Linux"> Linux</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Printer"> Printer</label>
+            <label><input type="checkbox" name="examples_os[]" value="Microsoft Office"> Microsoft Office</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Mouse"> Mouse</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="RAM Memory"> RAM Memory</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Scanners"> Scanners</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Monitor"> Monitor</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Windows"> Windows</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Internet Cable"> Internet Cable</label><br>
+            <label><input type="checkbox" name="examples_os[]" value="Motherboard"> Motherboard</label><br>
+        </div>
+
+        <div class="question">
+            <h2>17. Software or Application is a program that runs on top of Operating System.</h2>
+            <label><input type="radio" name="what_is_sw" value="true"> True</label><br>
+            <label><input type="radio" name="what_is_sw" value="false"> False</label><br>
+        </div>
+
+        <div class="question">
+            <h2>18. Examples of Software or Applications:</h2>
+            <label><input type="checkbox" name="examples_sw[]" value="Games (example: Fornite, Roblox, etc)"> Games (example: Fornite, Roblox, etc)</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Calculator"> Calculator</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="RAM Memory"> RAM Memory</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Microsoft Office (Excel, Word, Power Point)"> Microsoft Office (Excel, Word, Power Point)</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Windows"> Windows</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Google Chrome, Mozilla Firefox, Safari, etc,"> Google Chrome, Mozilla Firefox, Safari</label>
+            <label><input type="checkbox" name="examples_sw[]" value="Microsoft Office"> Microsoft Office</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Mouse"> Mouse</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Linux"> Linux</label><br>
+            <label><input type="checkbox" name="examples_sw[]" value="Monitor"> Monitor</label><br>
+        </div>
+
+        <div class="question">
+            <h2>19. Network allows to communicate two computers</h2>
+            <label><input type="radio" name="network_allows_communicate" value="true"> True</label><br>
+            <label><input type="radio" name="network_allows_communicate" value="false"> False</label><br>
+        </div>
+
+        <div class="question">
+            <h2>20. Thanks to Internet you can send email to another partner</h2>
+            <label><input type="radio" name="internet_allows_email" value="true"> True</label><br>
+            <label><input type="radio" name="internet_allows_email" value="false"> False</label><br>
+        </div>
+
+        <div class="question">
+            <h2>21. Examples of Network Devices or parts:</h2>
+            <label><input type="checkbox" name="examples_netdevices[]" value="Network cable"> Network cable</label><br>
+            <label><input type="checkbox" name="examples_netdevices[]" value="Printer"> Printer</label><br>
+            <label><input type="checkbox" name="examples_netdevices[]" value="Modem"> Modem</label><br>
+            <label><input type="checkbox" name="examples_netdevices[]" value="Router"> Router</label><br>
+            <label><input type="checkbox" name="examples_netdevices[]" value="Any of above"> Any of above</label><br>
+            <label><input type="checkbox" name="examples_netdevices[]" value="All of above"> All of above</label>
+        </div>
         <button type="submit">Submit Quiz</button>
     </form>
 
@@ -89,6 +242,5 @@
             return confirm("Are you sure you want to submit your answers?");
         }
     </script>
-
 </body>
 </html>
