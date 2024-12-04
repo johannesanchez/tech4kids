@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firebase Google Auth Test</title>
+  <script src="main.js" defer type="module"></script>
+
+</head>
+<body>
+  <!-- <h1>Firebase Google Login</h1>
+  <button id="loginBtn">Login with Google</button>
+  <button id="logoutBtn" style="display: none;">Logout</button>
+  <p id="userInfo"></p> -->
+
+  <main>
+    <!-- Introduction Section -->
+    <section id="google_auth">
+        <h2>Google Auth</h2>
+        <div>
+            <form action="">
+                <div class="input">
+                    <button id="google-login-btn" class="google-button">
+                        <i class="fab fa-google"></i> Login with Google
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+  </main>
+
+  <!-- <script>
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBp24YE8jcNTnwRkG7v6koJyELmEBwFFRg",
+        authDomain: "tech4kids-9b9b2.firebaseapp.com",
+        projectId: "tech4kids-9b9b2",
+        storageBucket: "tech4kids-9b9b2.firebasestorage.app",
+        messagingSenderId: "449324453437",
+        appId: "1:449324453437:web:c5b3d7e09b16121d9ba454",
+        measurementId: "G-PJ0C86ZVZP"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Login with Google
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const userInfo = document.getElementById("userInfo");
+
+    loginBtn.addEventListener("click", () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          userInfo.textContent = `Logged in as: ${user.displayName} (${user.email})`;
+          loginBtn.style.display = "none";
+          logoutBtn.style.display = "inline-block";
+        })
+        .catch((error) => {
+          console.error("Login failed:", error.message);
+        });
+    });
+
+    // Logout
+    logoutBtn.addEventListener("click", () => {
+      auth.signOut()
+        .then(() => {
+          userInfo.textContent = "You are logged out.";
+          loginBtn.style.display = "inline-block";
+          logoutBtn.style.display = "none";
+        })
+        .catch((error) => {
+          console.error("Logout failed:", error.message);
+        });
+    });
+  </script> -->
+</body>
+</html>
