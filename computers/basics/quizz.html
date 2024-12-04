@@ -47,26 +47,27 @@
     <!-- <form action="https://formsubmit.co/72a22628e5848b9da010da58fdc18666" method="POST" onsubmit="return confirmSubmission()"> -->
         <form action="https://formsubmit.co/johannesanchez@hotmail.com" method="POST" onsubmit="return confirmSubmission()">
         
-        <!-- Email Protection -->
-        <input type="hidden" name="_subject" value="Quiz Submission">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_confirmation" value="Thank you! Your answers have been submitted successfully.">
-        <input type="hidden" name="_next" value="https://johannesanchez.github.io/tech4kids/computers/basics/thankyou.html">
-        <input type="text" name="_honey" style="display:none">
-    
-        <!-- Student's Name -->
-        <div class="question">
-            <h2>Enter your Name:</h2>
-            <input type="text" name="student_name" required class="long-input">
-        </div>
+            <!-- Email Protection -->
+            <input type="hidden" name="_subject" value="Quiz Submission">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_confirmation" value="Thank you! Your answers have been submitted successfully.">
+            <input type="hidden" name="_next" value="https://johannesanchez.github.io/tech4kids/computers/basics/thankyou.html">
+            <input type="text" name="_honey" style="display:none">
+            <input type="email" name="email">
+        
+            <!-- Student's Name -->
+            <div class="question">
+                <h2>Enter your Name:</h2>
+                <input type="text" name="student_name" required class="long-input">
+            </div>
 
-        <!-- Quiz Questions -->
-        <!-- Higiene -->
-        <div class="question">
-            <h2>1. What should I do before using a computer?</h2>
-            <input type="text" name="before_using_computer" required class="long-input">
-        </div>
+            <!-- Quiz Questions -->
+            <!-- Higiene -->
+            <div class="question">
+                <h2>1. What should I do before using a computer?</h2>
+                <input type="text" name="before_using_computer" required class="long-input">
+            </div>
 
         <!-- <div class="question">
             <h2>2. I'm studying in the computer and my mom takes me the dinner, what should I do?</h2>
