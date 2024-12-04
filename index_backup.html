@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech for Kids!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js"></script> -->
+    <style>
+        body {
+            font-family: 'Fredoka One', sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 50px; /* Add enough space based on the height of the footer */
+            box-sizing: border-box;
+        }
+        /* Header styles */
+        header {
+            background-color: #ffcc00; /* Bright yellow */
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border-bottom: 8px solid #ff6f61; /* Fun orange border */
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #ff6f61; /* Fun orange color */
+        }
+
+        p, ul {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        /* Colorful frame around YouTube video */
+        .video-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 8px solid transparent;
+            border-image: linear-gradient(45deg, #ff6f61, #ffcc00, #4caf50, #42a5f5) 1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow to make it stand out */
+            border-radius: 15px; /* Rounded corners */
+            text-align: center;
+        }
+
+        iframe {
+            border-radius: 10px; /* Add rounded corners to video */
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            height: 50px; /* Adjust this to the height of your footer */
+            z-index: 10; /* Make sure it's above content */
+        }
+
+        a {
+            color: #42a5f5; /* Light blue for links */
+            text-decoration: none;
+        }
+
+        /* Hover effects */
+        a:hover {
+            color: #ffcc00; /* Yellow on hover */
+            text-decoration: underline;
+        }
+
+        /* Extra fun background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/bright-squares.png'); /* Fun pattern */
+            opacity: 0.1;
+            z-index: -1; /* Ensure it's behind all content */
+            pointer-events: none; /* Prevents it from blocking clicks */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tech for Kids!</h1>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Welcome to the computer science curriculum designed for kids aged 10 and up! This curriculum will introduce basic computer concepts and programming, helping young learners develop essential coding and problem-solving skills.</p>
+        </section>
+
+        <!-- Curriculum Overview Section -->
+        <section id="curriculum-overview">
+            <h2>Level 1: Curriculum Overview</h2>
+            <ul>
+                <li><strong>Level 1: </strong><a href="computers/intro_computers.html">Introduction to Computers</a></li>
+                <li><strong>Level 2: </strong> Microsoft/Google Office Basics (Instructor)</li>
+                <li><strong>Level 3: </strong> Operating Systems (OS) (Instructor)</li>
+                <li><strong>Level 4: </strong> Linux, MacOS (Instructor)</li>
+                <li><strong>Level 4: </strong><a href="computers/typing.html">Typing</a></li>
+            </ul>
+        </section>
+
+        <!-- Detailed Modules Section -->
+        <section id="modules">
+            <h2>Basic Module</h2>
+            <h3>Level 2: Programming Basics</h3>
+            <ul>
+                <li><strong>Level 1: </strong>Introduction to Programming (Instructor)</li>
+                <li><strong>Level 2: </strong><a href="coding/intro_programming.html">Introduction to Scratch Programming</a></li>
+                <!-- <li><strong>Level 3: </strong> Introduction to Robotics</li>
+                <li><strong>Level 5: </strong> Advanced Projects and Collaboration</li> -->
+                <!-- <li>Week 3-5: Scratch Basics - Animations and Games</li>
+                <li>Week 6-9: Scratch Projects - Loops and Conditionals</li>
+                <li>Week 10: Final Project and Review</li> -->
+            </ul>
+
+            <h3>Level 3: Roblox Programming and Game Creation</h3>
+            <ul>
+                <li>Week 1-2: ???</li>
+                <li>Week 3-4: ???</li>
+                <li>Week 5-6: ???</li>
+                <li>Week 7-10: ???</li>
+            </ul>
+
+            <h2>Medium Module</h2>
+            <h3>Level 4: Python Programming</h3>
+            <ul>
+                <li>Week 1-2: Introduction to Python Syntax</li>
+                <li>Week 3-4: Loops, Conditionals, and Functions</li>
+                <li>Week 5-6: Creating a Python Game</li>
+                <li>Week 7-10: Final Project and Review</li>
+            </ul>
+
+            <!-- <h3>Level 4: Introduction to Robotics</h3>
+            <ul>
+                <li>Week 1-2: ???</li>
+                <li>Week 3-4: ???</li>
+                <li>Week 5-6: ???</li>
+                <li>Week 7-10: ???</li>
+            </ul>
+            <h2>Advanced Module</h2>
+            <h3>Level 5: Advanced Projects and Collaboration</h3>
+            <ul>
+                <li>Week 1-2: ???</li>
+                <li>Week 3-4: ???</li>
+                <li>Week 5-6: ???</li>
+                <li>Week 7-10: ???</li>
+            </ul> -->
+        </section>
+
+        <!-- Additional Resources Section -->
+        <section id="resources">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="https://scratch.mit.edu/">Scratch Official Website</a></li>
+                <li><a href="https://www.tynker.com/">Tynker</a> - Learn coding through interactive games</li>
+                <li><a href="https://www.khanacademy.org/computing/computer-programming">Khan Academy Programming</a> - Free programming courses for kids</li>
+                <li><a href="https://www.raspberrypi.org/">Raspberry Pi Projects</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Johannes Allen Sanchez with the help of chatGPT ;) | GitHub: <a href="https://github.com/johannesanchez">johannesanchez</a></p>
+    </footer>
+</body>
+</html>
+
