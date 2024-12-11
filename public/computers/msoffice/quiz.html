@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Tools Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .quiz-section {
+      margin-bottom: 40px;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    .question input {
+      margin-right: 10px;
+    }
+    .submit-button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Google Tools Quiz</h1>
+  <form id="quiz-form">
+
+    <!-- Google Docs Section -->
+    <div class="quiz-section">
+      <h2>Google Docs</h2>
+
+      <div class="question">
+        <p>1. Google Docs allows you to collaborate with others in real-time. (True/False)</p>
+        <input type="radio" name="q1" value="true"> True
+        <input type="radio" name="q1" value="false"> False
+      </div>
+
+      <div class="question">
+        <p>2. What is the shortcut to copy text in Google Docs?</p>
+        <input type="text" name="q2" placeholder="Type your answer">
+      </div>
+
+      <div class="question">
+        <p>3. Which of the following are formatting options in Google Docs? (Select all that apply)</p>
+        <input type="checkbox" name="q3" value="bold"> Bold
+        <input type="checkbox" name="q3" value="underline"> Underline
+        <input type="checkbox" name="q3" value="formula"> Formula
+        <input type="checkbox" name="q3" value="italics"> Italics
+      </div>
+
+      <div class="question">
+        <p>4. What type of file does Google Docs create by default?</p>
+        <input type="radio" name="q4" value="docx"> .docx
+        <input type="radio" name="q4" value="pdf"> .pdf
+        <input type="radio" name="q4" value="gdoc"> .gdoc
+      </div>
+
+      <div class="question">
+        <p>5. Fill in the blank: The toolbar option to insert a table is found under the ______ menu.</p>
+        <input type="text" name="q5" placeholder="Type your answer">
+      </div>
+
+      <!-- Add 5 more questions as needed -->
+    </div>
+
+    <!-- Google Sheets Section -->
+    <div class="quiz-section">
+      <h2>Google Sheets</h2>
+
+      <div class="question">
+        <p>1. Google Sheets supports adding formulas to calculate values. (True/False)</p>
+        <input type="radio" name="q11" value="true"> True
+        <input type="radio" name="q11" value="false"> False
+      </div>
+
+      <div class="question">
+        <p>2. What is the shortcut to add a new row in Google Sheets?</p>
+        <input type="text" name="q12" placeholder="Type your answer">
+      </div>
+
+      <div class="question">
+        <p>3. Which of the following are valid functions in Google Sheets? (Select all that apply)</p>
+        <input type="checkbox" name="q13" value="sum"> SUM
+        <input type="checkbox" name="q13" value="average"> AVERAGE
+        <input type="checkbox" name="q13" value="concat"> CONCAT
+        <input type="checkbox" name="q13" value="bold"> BOLD
+      </div>
+
+      <div class="question">
+        <p>4. What type of chart would you use to show trends over time?</p>
+        <input type="radio" name="q14" value="bar"> Bar Chart
+        <input type="radio" name="q14" value="line"> Line Chart
+        <input type="radio" name="q14" value="pie"> Pie Chart
+      </div>
+
+      <div class="question">
+        <p>5. Fill in the blank: To add a chart, go to the ______ menu in Google Sheets.</p>
+        <input type="text" name="q15" placeholder="Type your answer">
+      </div>
+
+      <!-- Add 5 more questions as needed -->
+    </div>
+
+    <!-- Google Drive Section -->
+    <div class="quiz-section">
+      <h2>Google Drive</h2>
+
+      <div class="question">
+        <p>1. Google Drive allows you to share files with others. (True/False)</p>
+        <input type="radio" name="q21" value="true"> True
+        <input type="radio" name="q21" value="false"> False
+      </div>
+
+      <div class="question">
+        <p>2. What is the maximum free storage provided by Google Drive?</p>
+        <input type="text" name="q22" placeholder="Type your answer">
+      </div>
+
+      <div class="question">
+        <p>3. Which of the following can be uploaded to Google Drive? (Select all that apply)</p>
+        <input type="checkbox" name="q23" value="pdf"> PDF
+        <input type="checkbox" name="q23" value="image"> Images
+        <input type="checkbox" name="q23" value="video"> Videos
+        <input type="checkbox" name="q23" value="application"> Applications
+      </div>
+
+      <div class="question">
+        <p>4. What happens when you delete a file from Google Drive?</p>
+        <input type="radio" name="q24" value="trash"> It moves to the Trash
+        <input type="radio" name="q24" value="permanent"> It is permanently deleted
+      </div>
+
+      <div class="question">
+        <p>5. Fill in the blank: To share a file in Google Drive, use the ______ button.</p>
+        <input type="text" name="q25" placeholder="Type your answer">
+      </div>
+
+      <!-- Add 5 more questions as needed -->
+    </div>
+
+    <button type="submit" class="submit-button">Submit Quiz</button>
+    <div class="result" id="result"></div>
+  </form>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('result').innerText = "Your responses have been submitted. Great job!";
+    });
+  </script>
+
+</body>
+</html>

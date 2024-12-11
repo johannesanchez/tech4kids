@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz Time!</h1>
+  </header>
+  <main>
+    <p>Welcome, <span id="user-name"></span>!</p>
+
+  <!-- Auth Status Display -->
+  <div id="auth-status">Not authenticated</div>
+
+  <!-- Quiz Content -->
+  <div id="quiz-container">
+    <h2>Your Quiz</h2>
+    <!-- Your quiz questions and answers here -->
+  </div>
+
+  <!-- Logout Button -->
+  <button id="logout-btn" style="display:none;">Log Out</button>
+
+  <form id="quiz-form">
+      <label for="question1">What is 2 + 2?</label>
+      <input type="text" id="question1" name="question1" placeholder="Your answer">
+      <button type="submit">Submit</button>
+      <!-- <button id="logout-btn" style="display: none;">Log Out</button> -->
+  </form>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js" type="module"></script>
+  <script src="auth.js" type="module"></script>
+  <script src="quiz.js" type="module"></script>
+</body>
+</html>

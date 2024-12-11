@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Lessons for Kids</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Tech Lessons for Kids</h1>
+  </header>
+  <main>
+    <div id="auth-status">Checking authentication status...</div>
+    <!-- <button id="signup-btn">Sign up with Google</button>
+    <button id="login-btn">Login</button> -->
+    <!-- <button id="logout-btn" style="display: none;">Log Out</button> -->
+    <button id="google-sign-in">Sign in with Google</button>
+</main>
+  <!-- Include Firebase scripts -->
+  <!-- <script type="module" src="auth.js"></script> -->
+  <script type="module">
+    import { signInWithGoogle } from "./auth.js";
+
+    document.getElementById("google-sign-in").addEventListener("click", signInWithGoogle);
+  </script>
+</body>
+</html>

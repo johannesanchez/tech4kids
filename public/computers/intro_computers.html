@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <script type="module" src="../home.js"></script>
+    <style>
+        body {
+            font-family: 'Fredoka One', sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 50px; /* Add enough space based on the height of the footer */
+            box-sizing: border-box;
+        }
+        /* Header styles */
+        header {
+            background-color: #ffcc00; /* Bright yellow */
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            border-bottom: 8px solid #ff6f61; /* Fun orange border */
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #ff6f61; /* Fun orange color */
+        }
+        h2:hover {
+            color: #388E3C;
+            text-decoration: underline;
+        }
+        p, ul {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        /* Colorful frame around YouTube video */
+        .video-container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 8px solid transparent;
+            border-image: linear-gradient(45deg, #ff6f61, #ffcc00, #4caf50, #42a5f5) 1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow to make it stand out */
+            border-radius: 15px; /* Rounded corners */
+            text-align: center;
+        }
+
+        iframe {
+            border-radius: 10px; /* Add rounded corners to video */
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            height: 50px; /* Adjust this to the height of your footer */
+            z-index: 10; /* Make sure it's above content */
+        }
+
+        a {
+            color: #42a5f5; /* Light blue for links */
+            text-decoration: none;
+        }
+
+        /* Hover effects */
+        a:hover {
+            color: #ffcc00; /* Yellow on hover */
+            text-decoration: underline;
+        }
+
+        /* Extra fun background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/bright-squares.png'); /* Fun pattern */
+            opacity: 0.1;
+            z-index: -1; /* Ensure it's behind all content */
+            pointer-events: none; /* Prevents it from blocking clicks */
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to Computers</h1>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <p>A computer is a device that can perform a variety of tasks by following instructions (programs). Computers are used to help solve problems, create art, play games, and communicate with others. In this section, we’ll learn about how computers work.</p>
+            <div style="text-align:center; margin-top:20px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RmbFJq2jADY?si=KQLJ2-oEbITueOdm" 
+                        title="What are Computers" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="lesson-outline">
+            <h2>Introduction to Computers</h2>
+            <ul>
+                What you will learn:
+                <li>You will undertstand computer hardware, software and applications</li>
+                <li>Computer Science Fundamentals</li>
+                <li>Learn how computer works</li>
+                <p><a href="https://www.udemy.com/course/computer-skills-for-parents-to-teach-their-kids/learn/lecture/23169374#overview" class="back-button" target="_blank" rel="noopener noreferrer">Udemy Course</a></p>
+            </ul>
+            <ul>
+                <p><a href="../computers/basics/quizz.html" class="back-button" target="_blank" rel="noopener noreferrer">Quiz</a></p>
+            </ul>
+        </section>
+
+        <!-- <section id="msoffice">
+            <h2>Office</h2>
+            <ul>
+                What you will learn:
+                <li>Basics of Ms Office such as: Word, Excel, PowerPoint ("Follow up with your instructor")</li>
+            </ul>
+        </section> -->
+
+        <!-- <section id="operatingystems">
+            <h2>Operating Systems</h2>
+            <ul>
+                What you will learn:
+                <li>Basics of Ms Office such as: Word, Excel, PowerPoint ("Follow up with your instructor")</li>
+            </ul>
+        </section> -->
+
+        <section id="next-step">
+            <h2>Next Steps</h2>
+            <p>Congratulations !!! You have sucessfully completed the level Introduction to Computers. You understand now he basics of how computers, the next step will be learning Office Tools! <a href="../computers/intro_computers_msoffice.html">Go to the next lesson</a>.</p>
+        </section>
+
+        <section id="main-page">
+            <p><a href="../index.html" class="back-button">Back to Main Page</a>.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created by Johannes Allen Sanchez with the help of chatGPT ;) | <a href="index.html">Back to Main Page</a></p>
+    </footer>
+</body>
+</html>
