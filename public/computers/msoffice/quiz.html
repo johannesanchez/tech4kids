@@ -4,47 +4,180 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Tools Quiz</title>
+  <script type="module" src="../../quiz.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
+        font-family: 'Fredoka One', sans-serif;
+        background-color: #f0f8ff; /* Light blue background */
+        color: #333;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 50px; /* Add enough space based on the height of the footer */
+        box-sizing: border-box;
     }
-    h1, h2 {
-      color: #333;
+    
+    /* Header styles */
+    header {
+        background-color: #ffcc00; /* Bright yellow */
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        border-bottom: 8px solid #ff6f61; /* Fun orange border */
     }
-    .quiz-section {
-      margin-bottom: 40px;
+    
+    h1 {
+        font-size: 3rem;
+        margin: 0;
     }
+    
+    /* Main content styles */
+    main {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Header styles for User */
+    #header {
+        position: relative;
+        width: 100%;
+        padding: 10px;
+        background-color: #f4f4f4; /* Background color */
+    }
+    
+    /* Style for the username */
+    #userName {
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 20px;
+        color: #333; /* User name color */
+    }
+    
+    /* Style for the logout button */
+    #logout-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        background-color: #ff4f4f; /* Red button */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+    
+    #logout-btn:hover {
+        background-color: #e04e4e; /* Slightly darker red on hover */
+    }
+    
+    /* Quiz Form Styles */
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow around the form */
+        margin-bottom: 30px; /* Space between the form and footer */
+    }
+    
+    /* Quiz Questions */
     .question {
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9; /* Light grey background */
+        border-radius: 8px;
+        border: 2px solid #ddd; /* Border for each question */
     }
-    .question p {
-      font-weight: bold;
+    
+    /* Question heading */
+    .question h2 {
+        color: #ff6f61; /* Fun orange color */
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
-    .question input {
-      margin-right: 10px;
+    
+    /* Style for input fields */
+    input[type="text"],
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 10px;
+        vertical-align: middle;
     }
-    .submit-button {
-      display: block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
     }
-    .submit-button:hover {
-      background-color: #0056b3;
+    
+    input[type="text"]:focus {
+        border-color: #ff6f61; /* Highlight text input on focus */
+        outline: none;
     }
-    .result {
-      margin-top: 20px;
-      font-size: 18px;
-      color: green;
-      font-weight: bold;
+    
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-right: 8px;
+        accent-color: #ff6f61; /* Change checkbox and radio button color */
     }
+    
+    /* Style for submit button */
+    #submit-btn {
+        padding: 12px 24px;
+        background-color: #42a5f5; /* Blue button */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    
+    #submit-btn:hover {
+        background-color: #1e88e5; /* Darker blue on hover */
+    }
+    
+    /* Footer styles */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        height: 50px; /* Adjust this to the height of your footer */
+        z-index: 10; /* Make sure it's above content */
+    }
+    
+    /* Additional fun background */
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('https://www.transparenttextures.com/patterns/bright-squares.png'); /* Fun pattern */
+        opacity: 0.1;
+        z-index: -1; /* Ensure it's behind all content */
+        pointer-events: none; /* Prevents it from blocking clicks */
+    }
+    
+    /* Hover effects */
+    a:hover {
+        color: #ffcc00; /* Yellow on hover */
+        text-decoration: underline;
+    }
+    
+
   </style>
 </head>
 <body>
@@ -54,78 +187,165 @@
 
     <!-- Google Docs Section -->
     <div class="quiz-section">
-      <h2>Google Docs</h2>
+      <h2>Word Processing</h2>
 
       <div class="question">
-        <p>1. Google Docs allows you to collaborate with others in real-time. (True/False)</p>
-        <input type="radio" name="q1" value="true"> True
-        <input type="radio" name="q1" value="false"> False
+        <p><strong>1.</strong> You can change the font size of a text in a word processor. (True/False)</p>
+        <input type="radio" name="word-q1" value="true"> True
+        <input type="radio" name="word-q1" value="false"> False
+      </div>
+      <div class="question">
+        <p><strong>2.</strong> What shortcut is used to save a document?</p>
+        <input type="text" name="word-q2" placeholder="Type your answer">
       </div>
 
       <div class="question">
-        <p>2. What is the shortcut to copy text in Google Docs?</p>
-        <input type="text" name="q2" placeholder="Type your answer">
+        <p><strong>3.</strong> Which of the following are formatting options in Google Docs? (Select all that apply)</p>
+        <input type="checkbox" name="word-q3" value="bold"> Bold
+        <input type="checkbox" name="word-q3" value="underline"> Underline
+        <input type="checkbox" name="word-q3" value="formula"> Formula
+        <input type="checkbox" name="word-q3" value="italics"> Italics
       </div>
 
       <div class="question">
-        <p>3. Which of the following are formatting options in Google Docs? (Select all that apply)</p>
-        <input type="checkbox" name="q3" value="bold"> Bold
-        <input type="checkbox" name="q3" value="underline"> Underline
-        <input type="checkbox" name="q3" value="formula"> Formula
-        <input type="checkbox" name="q3" value="italics"> Italics
+        <p><strong>4.</strong> You can align text to the left, center, right, or justify. (True/False)</p>
+        <input type="radio" name="word-q4" value="true"> True
+        <input type="radio" name="word-q4" value="false"> False
       </div>
-
       <div class="question">
-        <p>4. What type of file does Google Docs create by default?</p>
-        <input type="radio" name="q4" value="docx"> .docx
-        <input type="radio" name="q4" value="pdf"> .pdf
-        <input type="radio" name="q4" value="gdoc"> .gdoc
+        <p><strong>5.</strong> To make text bold, you use the shortcut Ctrl + ______.</p>
+        <input type="text" name="word-q5" placeholder="Type your answer">
       </div>
-
       <div class="question">
-        <p>5. Fill in the blank: The toolbar option to insert a table is found under the ______ menu.</p>
-        <input type="text" name="q5" placeholder="Type your answer">
+        <p><strong>6.</strong> You can insert a table into a document. (True/False)</p>
+        <input type="radio" name="word-q6" value="true"> True
+        <input type="radio" name="word-q6" value="false"> False
       </div>
-
-      <!-- Add 5 more questions as needed -->
+      <div class="question">
+        <p><strong>7.</strong> What feature allows you to view the document as it will appear when printed?</p>
+        <input type="radio" name="word-q7" value="print-preview"> Print Preview
+        <input type="radio" name="word-q7" value="layout"> Layout
+        <input type="radio" name="word-q7" value="read-mode"> Read Mode
+      </div>
+      <div class="question">
+        <p><strong>8.</strong> What type of file does Google Docs create by default?</p>
+        <input type="radio" name="word-q8" value="docx"> .docx
+        <input type="radio" name="word-q8" value="pdf"> .pdf
+        <input type="radio" name="word-q8" value="gdoc"> .gdoc
+      </div>
+      <div class="question">
+        <p><strong>9.</strong> To find and replace text in a document, use the shortcut Ctrl + ______.</p>
+        <input type="text" name="word-q9" placeholder="Type your answer">
+      </div>
+      <div class="question">
+        <p><strong>10.</strong> You can use templates to quickly create documents. (True/False)</p>
+        <input type="radio" name="word-q10" value="true"> True
+        <input type="radio" name="word-q10" value="false"> False
+      </div>
+      <div class="question">
+        <p><strong>11.</strong> Google Docs allows you to collaborate with others in real-time. (True/False)</p>
+        <input type="radio" name="word-q11" value="true"> True
+        <input type="radio" name="word-q11" value="false"> False
+      </div>
+      <div class="question">
+        <p><strong>12.</strong> What is the shortcut to copy text in Google Docs?</p>
+        <input type="text" name="word-q12" placeholder="Type your answer">
+      </div>
     </div>
+
+
 
     <!-- Google Sheets Section -->
     <div class="quiz-section">
-      <h2>Google Sheets</h2>
+      <h2>Google Sheet / Microsoft Excel</h2>
 
       <div class="question">
-        <p>1. Google Sheets supports adding formulas to calculate values. (True/False)</p>
-        <input type="radio" name="q11" value="true"> True
-        <input type="radio" name="q11" value="false"> False
+        <p><strong>13.</strong> Google Sheets supports adding formulas to calculate values. (True/False)</p>
+        <input type="radio" name="excel-q13" value="true"> True
+        <input type="radio" name="excel-q13" value="false"> False
       </div>
 
       <div class="question">
-        <p>2. What is the shortcut to add a new row in Google Sheets?</p>
-        <input type="text" name="q12" placeholder="Type your answer">
+        <p><strong>14.</strong> What is the shortcut to add a new row in Google Sheets?</p>
+        <input type="text" name="excel-q14" placeholder="Type your answer">
       </div>
 
       <div class="question">
-        <p>3. Which of the following are valid functions in Google Sheets? (Select all that apply)</p>
-        <input type="checkbox" name="q13" value="sum"> SUM
-        <input type="checkbox" name="q13" value="average"> AVERAGE
-        <input type="checkbox" name="q13" value="concat"> CONCAT
-        <input type="checkbox" name="q13" value="bold"> BOLD
+        <p><strong>15.</strong> Which of the following are valid functions in Google Sheets? (Select all that apply)</p>
+        <input type="checkbox" name="excel-q15" value="sum"> SUM
+        <input type="checkbox" name="excel-q15" value="average"> AVERAGE
+        <input type="checkbox" name="excel-q15" value="concat"> CONCAT
+        <input type="checkbox" name="excel-q15" value="bold"> BOLD
       </div>
 
       <div class="question">
-        <p>4. What type of chart would you use to show trends over time?</p>
-        <input type="radio" name="q14" value="bar"> Bar Chart
-        <input type="radio" name="q14" value="line"> Line Chart
-        <input type="radio" name="q14" value="pie"> Pie Chart
+        <p><strong>16.</strong> What type of chart would you use to show trends over time?</p>
+        <input type="radio" name="excel-q16" value="bar"> Bar Chart
+        <input type="radio" name="excel-q16" value="line"> Line Chart
+        <input type="radio" name="excel-q16" value="pie"> Pie Chart
       </div>
 
       <div class="question">
-        <p>5. Fill in the blank: To add a chart, go to the ______ menu in Google Sheets.</p>
-        <input type="text" name="q15" placeholder="Type your answer">
+        <p><strong>17.</strong> Fill in the blank: To add a chart, go to the ______ menu in Google Sheets.</p>
+        <input type="text" name="excel-q17" placeholder="Type your answer">
       </div>
 
-      <!-- Add 5 more questions as needed -->
+      <div class="question">
+        <p><strong>18.</strong> You can use Google Sheets to create charts from your data. (True/False)</p>
+        <label>
+          <input type="radio" name="excel-q18" value="true" /> True
+        </label>
+        <label>
+          <input type="radio" name="excel-q18" value="false" /> False
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>19.</strong> What symbol is used to start a formula in Google Sheets?</p>
+        <label>
+          <input type="radio" name="excel-q19" value="#" /> #
+        </label>
+        <label>
+          <input type="radio" name="excel-q19" value="@" /> @
+        </label>
+        <label>
+          <input type="radio" name="excel-q19" value="=" /> =
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>20.</strong> Which of the following are examples of data you can enter in a Google Sheets cell?</p>
+        <label>
+          <input type="checkbox" name="excel-q20" value="Numbers" /> Numbers
+        </label>
+        <label>
+          <input type="checkbox" name="excel-q20" value="Text" /> Text
+        </label>
+        <label>
+          <input type="checkbox" name="excel-q20" value="Dates" /> Dates
+        </label>
+        <label>
+          <input type="checkbox" name="excel-q20" value="Videos" /> Videos
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>21.</strong> To add numbers in Google Sheets, you use the function <u>__________</u>.</p>
+        <input type="text" name="excel-q21" />
+      </div>
+    
+      <div class="question">
+        <p><strong>22.</strong> What is the default file format when you download a Google Sheet?</p>
+        <label>
+          <input type="radio" name="excel-q22" value=".pdf" /> .pdf
+        </label>
+        <label>
+          <input type="radio" name="excel-q22" value=".xlsx" /> .xlsx
+        </label>
+        <label>
+          <input type="radio" name="excel-q22" value=".docx" /> .docx
+        </label>
+      </div>
     </div>
 
     <!-- Google Drive Section -->
@@ -133,36 +353,92 @@
       <h2>Google Drive</h2>
 
       <div class="question">
-        <p>1. Google Drive allows you to share files with others. (True/False)</p>
-        <input type="radio" name="q21" value="true"> True
-        <input type="radio" name="q21" value="false"> False
+        <p><strong>23.</strong> Google Drive allows you to store files online so you can access them from any device. (True/False)</p>
+        <label>
+          <input type="radio" name="gdrive-q23" value="true" /> True
+        </label>
+        <label>
+          <input type="radio" name="gdrive-q23" value="false" /> False
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>24.</strong> Which type of files can be stored in Google Drive?</p>
+        <label>
+          <input type="checkbox" name="gdrive-q24" value="Photos" /> Photos
+        </label>
+        <label>
+          <input type="checkbox" name="gdrive-q24" value="Videos" /> Videos
+        </label>
+        <label>
+          <input type="checkbox" name="gdrive-q24" value="Documents" /> Documents
+        </label>
+        <label>
+          <input type="checkbox" name="gdrive-q24" value="Games" /> Games
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>25.</strong> What is the maximum file size you can upload to Google Drive using a free account?</p>
+        <label>
+          <input type="radio" name="gdrive-q25" value="10GB" /> 10GB
+        </label>
+        <label>
+          <input type="radio" name="gdrive-q25" value="15GB" /> 15GB
+        </label>
+        <label>
+          <input type="radio" name="gdrive-q25" value="5GB" /> 5GB
+        </label>
+      </div>
+    
+      <div class="question">
+        <p><strong>26.</strong> To share a file on Google Drive, you need to click the <u>__________</u> button.</p>
+        <input type="text" name="gdrive-q26" />
+      </div>
+    
+      <div class="question">
+        <p><strong>27.</strong> What happens if you delete a file from Google Drive?</p>
+        <label>
+          <input type="radio" name="gdrive-q27" value="It is permanently deleted immediately." /> It is permanently deleted immediately.
+        </label>
+        <label>
+          <input type="radio" name="gdrive-q27" value="It goes to the Trash folder." /> It goes to the Trash folder.
+        </label>
+        <label>
+          <input type="radio" name="gdrive-q27" value="It is hidden but not deleted." /> It is hidden but not deleted.
+        </label>
       </div>
 
       <div class="question">
-        <p>2. What is the maximum free storage provided by Google Drive?</p>
-        <input type="text" name="q22" placeholder="Type your answer">
+        <p><strong>28.</strong>. Google Drive allows you to share files with others. (True/False)</p>
+        <input type="radio" name="gdrive-q28" value="true"> True
+        <input type="radio" name="gdrive-q28" value="false"> False
       </div>
 
       <div class="question">
-        <p>3. Which of the following can be uploaded to Google Drive? (Select all that apply)</p>
-        <input type="checkbox" name="q23" value="pdf"> PDF
-        <input type="checkbox" name="q23" value="image"> Images
-        <input type="checkbox" name="q23" value="video"> Videos
-        <input type="checkbox" name="q23" value="application"> Applications
+        <p><strong>29.</strong> What is the maximum free storage provided by Google Drive?</p>
+        <input type="text" name="gdrive-q29" placeholder="Type your answer">
       </div>
 
       <div class="question">
-        <p>4. What happens when you delete a file from Google Drive?</p>
-        <input type="radio" name="q24" value="trash"> It moves to the Trash
-        <input type="radio" name="q24" value="permanent"> It is permanently deleted
+        <p><strong>30.</strong> Which of the following can be uploaded to Google Drive? (Select all that apply)</p>
+        <input type="checkbox" name="gdrive-q30" value="pdf"> PDF
+        <input type="checkbox" name="gdrive-q30" value="image"> Images
+        <input type="checkbox" name="gdrive-q30" value="video"> Videos
+        <input type="checkbox" name="gdrive-q30" value="application"> Applications
       </div>
 
       <div class="question">
-        <p>5. Fill in the blank: To share a file in Google Drive, use the ______ button.</p>
-        <input type="text" name="q25" placeholder="Type your answer">
+        <p><strong>31.</strong> What happens when you delete a file from Google Drive?</p>
+        <input type="radio" name="gdrive-q31" value="trash"> It moves to the Trash
+        <input type="radio" name="gdrive-q31" value="permanent"> It is permanently deleted
       </div>
 
-      <!-- Add 5 more questions as needed -->
+      <div class="question">
+        <p><strong>32.</strong> Fill in the blank: To share a file in Google Drive, use the ______ button.</p>
+        <input type="text" name="gdrive-q32" placeholder="Type your answer">
+      </div>
+
     </div>
 
     <button type="submit" class="submit-button">Submit Quiz</button>
@@ -170,11 +446,12 @@
   </form>
 
   <script>
-    document.getElementById('quiz-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      document.getElementById('result').innerText = "Your responses have been submitted. Great job!";
-    });
-  </script>
-
+    function confirmSubmission() {
+        return confirm("Are you sure you want to submit your answers?");
+    }
+</script>
+<div>
+  <button id="logout-btn">Log Out</button>
+</div>
 </body>
 </html>
